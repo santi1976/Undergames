@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    height: auto;
+    width: auto;
+}
+
+.login-body{
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding:0;
+    width: 100vw;
+    height: 100vh;
+}
+.login-main{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  height: 100vh;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+.errorMail{
+  display: none;
+}
+.errorPassword{
+  display: none;
+}
+.errorPasswordlength{
+  display: none;
+}
+.errormailTrue{
+  color: #e4314f;
+  display:flex;
+  justify-content: center;
+}
+.errorPasswordTrue{
+  color: #e4314f;
+  display:flex;
+  justify-content: center;
+}
+.errorPasswordlengthTrue{
+  color: #e4314f;
+  display:flex;
+  justify-content: center;
+}
+.log-in-form{
+  width: 85%;
+  height: 80% ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  background-color: #353535;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  
+}
+::placeholder{
+    color:white
+  }
+
+.input-styler-login{
+    width: 20vw;
+    border: 3px solid #1f2227;
+    padding:5px;
+    background-color:black;
+    border-radius: 10px;
+    height: 4.5vh;
+    margin-top: 20px;
+    margin-bottom: 10px; 
+    text-align: center;
+    color: white
+}
+.errorMail {
+  margin-bottom: 1.5em;
+}
+#login-button{
+  width: 17vw;
+  height: 50px;
+  padding: 1rem;
+  background-color: #0078f1;
+  border: solid 1px white;
+  display:flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+#login-button:hover{
+  transform: translate(5px,5px);
+  box-shadow: 0px 0px 20px 5px rgba(100,100,100,1);
+}
+
+.a-login{
+  color: #0078f1;
+}
+.h3-login{
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+.text-warning_login{
+  color: #fb8500;
+}
+
+.text-danger_login {
+  color: #e4314f;
+}
+
+.text-ok_login {
+  color: #ffffff;
+}
+
+.is-valid_login {
+
+border: #15b800 1.5px solid !important
+}
+
+.is-invalid_login {
+  
+  border: red 1.5px solid !important
+}
+
+.swal2-popup.swal2-modal.swal2-icon-error.swal2-show{
+  color: white;
+  background-color: black;
+  border: white solid 1px;
+}
+.swal2-confirm.swal2-styled{
+  background-color: #0078f1 !important;
+  border: 1px white solid !important;
+  box-shadow: 0px 0px 0px 0px transparent !important;
+}
+
+.errors.alert-warning_login {
+  display: none;
+  margin: auto;
+  text-align: center;
+  background-color: black;
+  border: white solid 1.5px;
+  border-radius: 15px;
+  color: red !important;
+  width: auto;
+  padding: 1em 2em;
+
+}
+
+.alert-warning_login{
+  color:#842029;
+  background-color: #F8D7DA;
+  text-align: center;
+  border-radius: 10px;
+  }
+
+@media  (max-width: 480px) {
+  .h3-login{
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  #login-button{
+    width: 40vw;
+    height: 40px;
+    padding: 1px;
+  }
+  .form-styler-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+ 
+   
+  }
+  #password{
+    margin: auto;
+    align-self: center !important;
+  }
+  .ca-styler-login{
+    font-size: 12px;
+    margin-top: 15px;
+    }
+  .cp-login{
+    font-size: 12px;
+    padding: 4px;
+  }
+  .rm-login{
+    font-size: 13px;
+    padding: 4px;
+    margin-bottom: 3px;
+  }
+  #remember-me{
+    margin-right: 3px;
+    margin-top: 3px;
+    transform: scale(1.1);
+  }
+  .input-styler-login{
+    width: 50vw;
+    height: 5vh;
+
+  }
+  }
+
+  @media  (min-width: 740px) {
+    .h3-login{
+      font-size: 50px;
+      margin-bottom: 35px;
+    }
+    #login-button{
+      width: 40vw;
+      height: 48px;
+      padding: 1px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+    .ca-styler-login{
+      font-size: 17px;
+      margin-top: 10px;
+      }
+    .cp-login{
+      font-size: 17px;
+      padding: 4px;
+    }
+    .rm-login{
+      font-size: 17px;
+      padding: 7px;
+      margin-bottom: 3px;
+    }
+    #remember-me{
+      margin-right: 3px;
+      margin-top: 3px;
+      transform: scale(1.3);
+      
+    }
+    .input-styler-login{
+      width: 50vw;
+      height: 5vh;
+    }
+    ::placeholder{
+      font-size: 17px;
+    }
+    }
+  

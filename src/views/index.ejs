@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head.ejs')  %> 
+        <link rel="stylesheet" href="/css/styles_home.css">
+        <link rel="stylesheet" href="/css/search_bar.css">
+    </head>
+
+
+        
+<body class="body__index">
+    <%- include('./partials/header')%>    
+    <%- include('./partials/search_bar')%>   
+
+<div class="principal">
+
+    <div class="col_left_ppal">  <!--slider -->
+
+        <div class="carousel" data-flickity='{"freeScroll": true, "wrapAround":true , "pageDots": false}'>
+        <% for(let i= 0; i < products.length; i++){ %>     
+
+        <div class="carousel-cell-top"> 
+            <div class="container_image_ppal_home">
+                <div id="image_game_ppal_home">
+                        <a href="/productDetail/<%= products[i].id_game %>"><img src="<%= products[i].img_1%> " alt=""  width="100%" height="70%" class="imghome"></a>
+                </div>     
+                <div id="title_box_home"><%= products[i].title %></div>
+                <div id="text_box_home"><%= products[i].short_descr %></div>
+            </div> <!--container_image_ppal_home -->
+        </div> <!--carousel-cell --> 
+        <% } %>    
+    </div> <!--carousel --> 
+    </div> <!--col_izq_ppal -->
+   
+    <div class="col_right_ppal">
+        <% for(let i= 0; i < 5; i++){ %>  
+    <div class="right_content">    
+            <div class="image-right">
+            <a href="/productDetail/<%= products[i].id_game %>"><img src="<%= products[i].img_1%>" width="100%" height="70%" class="imghome"/></a>
+        </div>
+        <div class="text_gallery_right0">
+                <div id="text_gallery_right1"><%= products[i].title %></div> 
+                <div id="text_gallery_right2"><%= products[i].one_word_descr %></div>
+        </div>
+            
+    </div>   <!-- right content-->  
+    <% } %> 
+    </div> <!--column right -->
+</div> <!--principal -->
+
+
+<div class="new_releases_container">
+    <h1 class="nRh1">New Releases</h1>
+    
+    <div class="carousel" data-flickity='{"freeScroll": true, "wrapAround":true, "pageDots": false }'>
+        <% for(let i= 0; i < products.length; i++){ %>  
+           <% if (products[i].id_game_group == 1) { %>
+    <div class="carousel-cell">    
+        <div class="new_releases_home">
+          <div class="image_box_home">
+            
+            <a href="/productDetail/<%= products[i].id_game %>"><img src="<%= products[i].img_1%> " alt=""  width="100%" height="100%" class="imghome"></a>
+            
+            <div id="category_home"><%=products[i].category%></div>
+            </div>
+            <br>
+            <div id="title_box_home"><%= products[i].title %></div>
+            <div id="creator_box_home"><%= products[i].creator %></div>
+           
+            <br>
+            <div class="price_line_home">
+                <div class="original_price_home"><del><%= products[i].original_price %></del></div>
+                <div class="price_w_discount_home"><%= products[i].price_w_discount %></div>
+                <div class="discount_detail_home"><span><%= products[i].discount %>  %OFF</span></div>
+            </div>
+        
+        </div>
+    </div>  <!-- End carousel-cell    -->  
+    <% } %> 
+    <% } %> 
+</div> <!-- End carousel    -->
+</div><!-- End new_releases_container    -->
+
+<div class="top_sellers_container">
+    <h1 class="tSh1">Top Sellers</h1>
+    
+    <div class="carousel" data-flickity='{"freeScroll": true, "wrapAround":true, "pageDots": false }'>
+        <% for(let i= 0; i < products.length; i++){ %>  
+           <% if (products[i].id_game_group == 2) { %>
+    <div class="carousel-cell">    
+        <div class="new_releases_home">
+          <div class="image_box_home">
+            
+            <a href="/productDetail/<%= products[i].id_game %>"><img src="<%= products[i].img_1%> " alt=""  width="100%" height="100%" class="imghome"></a>
+            
+            <div id="category_home"><%=products[i].category%></div>
+            </div>
+            <br>
+            <div id="title_box_home"><%= products[i].title %></div>
+            <div id="creator_box_home"><%= products[i].creator %></div>
+           
+            <br>
+            <div class="price_line_home">
+                <div class="original_price_home"><del><%= products[i].original_price %></del></div>
+                <div class="price_w_discount_home"><%= products[i].price_w_discount %></div>
+                <div class="discount_detail_home"><span><%= products[i].discount %>  %OFF</span></div>
+            </div>
+        
+        </div>
+    </div>  <!-- End carousel-cell    -->  
+    <% } %> 
+    <% } %> 
+</div> <!-- End carousel    -->
+</div><!-- End top_sellers_container    -->
+
+<div>
+    <img src="/images/banner_01.jpg" alt=""  id="banner" >    
+</div>
+
+<div class="free_container">
+    <h1 class="fh1">Free</h1>
+    
+    <div class="carousel" data-flickity='{"freeScroll": true, "wrapAround":true, "pageDots": false }'>
+        <% for(let i= 0; i < products.length; i++){ %>  
+           <% if (products[i].id_game_group == 3) { %>
+    <div class="carousel-cell">    
+        <div class="free_home">
+          <div class="image_box_home">
+            
+            <a href="/productDetail/<%= products[i].id_game %>"><img src="<%= products[i].img_1%> " alt=""  width="100%" height="100%" class="imghome"></a>
+            
+            <div id="category_home"><%=products[i].category%></div>
+            </div>
+            <br>
+            <div id="title_box_home"><%= products[i].title %></div>
+            <div id="creator_box_home"><%= products[i].creator %></div>
+           
+            <br>
+            <div class="download_detail_home"><span>Download</span></div>
+        
+        </div>
+    </div>  <!-- End carousel-cell    -->  
+    <% } %> 
+    <% } %> 
+</div> <!-- End carousel    -->
+</div><!-- End free_container    -->
+
+
+<div>
+    <img src="/images/banner_02.jpg" alt=""  id="banner" >    
+</div>
+
+
+<div class="creators_container">
+    <h1 class="ch1">Creators</h1>
+    <div class="carousel" data-flickity='{"freeScroll": true, "wrapAround":true , "pageDots": false}'>
+        <% for(let i= 0; i < creators.length; i++){ %>  
+            
+    <div class="carousel-cell-creators">    
+        <div class="card_creator">
+          <a href="/under_constr"><img src="<%= creators[i].creator_avatar%>" alt="" class="photo_creator"></a>
+            <h4><%= creators[i].nickname%></h4>
+            <div style="margin: 10px 0;">
+            <a href="#"><i class="fa-brands fa-dribbble"></i></a> 
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>  
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>  
+            <a href="#"><i class="fa-brands fa-facebook"></i></a> 
+            </div>
+            <p><button id="btn_creator">Buy me!</button></p>
+        </div>
+    </div> 
+    <% } %> 
+    </div> 
+    
+    </div>
+
+
+
+
+
+
+<!-- JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<%- include('./partials/footer')%>
+
+</body>
+</html>

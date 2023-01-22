@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/style__PD.css">
+    <link rel="stylesheet" href="/css/search_bar.css">
+    <script src="/js/buyCartScroller.js" defer ></script>
+  </head>
+  <body id="body__PD">
+    <header>
+      <%- include('partials/header.ejs')  %> 
+      <%- include('partials/search_bar')%> 
+    </header>   
+
+       <div class="supersection">
+        <section class="cart-section__PD">
+              <article>
+                <h1><%=selectedGame.title%></h1>
+                <img src="<%= selectedGame.img_1%>"  alt="Product Cover Image">
+              </article>
+              <div class="prize__PD">
+                <p><%= selectedGame.original_price %></p>
+              </div>
+              <div class="discount__PD">
+                <%= selectedGame.discount%>% OFF
+              </div>
+              <a href="/productCart"><button id="cart-button__PD">ADD TO CART</button></a>
+              <div id="cart_PD">
+                 <table>
+               <!--        <tr>
+                        <td>Recommended Age</td>
+                        <td class="specs_titles_PD" ><%= selectedGame.age %></td>
+                      </tr>  -->
+                      
+                      <tr>
+                        <td>Launch Date</td>
+                        <td class="specs_titles_PD" ><%= selectedGame.launch_date %></td>
+                      </tr>
+                      <tr>
+                        <td id="platform_PD">Platform</td>
+                        <td class="specs_titles_PD" ><%= selectedGame.platform.platform_descr %></td>
+                      </tr>
+                </table>
+                <div>
+              </section>
+            </section>
+  
+                  
+            <section> 
+               <div class="container__PD">
+                      <ul class="slider__PD">
+                          <li id="slide1__PD">
+                              <img src="<%= selectedGame.img_1%>"alt="Image 1">
+                          </li>
+  
+                          <li id="slide2__PD">
+                              <img src="<%= selectedGame.img_2%>" alt="Image 2">
+                          </li>
+  
+                          <li id="slide3__PD">
+                              <img src="<%= selectedGame.img_3%>"alt="Image 3">
+                          </li>
+  
+                          <li id="slide4__PD">
+                              <img id="image4" src="<%= selectedGame.img_4%>" alt="Image 4">
+                          </li>
+                          <li id="slide5__PD">
+                              <img id="image5" src="<%= selectedGame.img_5%>" alt="Image 5">
+                          </li>
+                          <li id="video__PD">
+                          
+                            <iframe src="<%= selectedGame.video_1%>" frameborder="0"> </iframe>
+                            
+                      </ul>
+                      
+                      <ul class="menu__PD">
+                        <li>
+                          <a href="#video__PD">
+                              <img id="image5" src="<%= selectedGame.miniatura%>"  alt="Video">
+                          </a>
+                        </li>
+                        <li>
+                            <a href="#slide1__PD">
+                              <img src="<%= selectedGame.img_1%>" alt="Image 1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#slide2__PD">
+                              <img id="image2" src="<%= selectedGame.img_2%>" alt="Image 2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#slide3__PD">
+                              <img id="image3" src="<%= selectedGame.img_3%>" alt="Image 3">
+                            </a>
+                       </li>
+                       <li>
+                            <a href="#slide4__PD" >
+                                <img id="image4" src="<%= selectedGame.img_4%>"alt="Image 4">
+                            </a>
+                       </li>
+                       <li>
+                            <a href="#slide5__PD" >
+                                <img id="image5" src="<%= selectedGame.img_5%>" alt="Image 5">
+                            </a>
+                       </li>
+                     </ul>
+                  </div>
+               </section> 
+              </div>
+          <div class="wrapper-descripcion__PD">
+          <section id="descripcion__PD">
+          <h3>Description</h3>
+          <input type="checkbox" class="read-more-state" id="more">
+            <p class="read-more-wrap">
+              <%= selectedGame.short_descr%>
+              <span class="read-more-target"> <%= selectedGame.long_descr%>
+                <img src="<%= selectedGame.img_4%>" alt="Image 4">
+                <img src="<%= selectedGame.img_5%>" alt="Image 5">
+              </span>
+              </p>
+            <label for="more" class="read-more-trigger"></label>
+          </section>
+        </div>
+          <section class="specifications__PD">
+            <h3 id="specs_PD">Specifications</h3>
+            <table >
+              <tr>
+                <td class="min_rec_PD">Minimum</td>
+                <td class="min_rec_PD">Recommended</td>
+              </tr>
+              <tr>
+                <td>Operating System</td>
+                <td>Operating System</td>
+              </tr>
+              <tr>
+                <td><%= selectedGame.os_min.os_min%></td>
+                <td><%= selectedGame.os_rec.os_rec%></td>
+              </tr>
+              <tr>
+                <td>Processor</td>
+                <td>Processor</td>
+              </tr>
+              <tr>
+                <td><%= selectedGame.processor_min.processor_min%></td>
+                <td><%= selectedGame.processor_rec.processor_rec%></td>
+              </tr>
+              <tr>
+                <td>Storage</td>
+                <td>Storage</td>
+              </tr>
+              <tr>
+                <td><%= selectedGame.storage_min.storage_min%></td>
+                <td><%= selectedGame.storage_rec.storage_rec%></td>
+              </tr>
+              <tr>
+                <td>Graphics</td>
+                <td>Graphics</td>
+              </tr>
+              <tr>
+                <td><%= selectedGame.graphics_min.graphics_min%></td>
+                <td><%= selectedGame.graphics_rec.graphics_rec%></td>
+              </tr>
+        </table>
+          </section>
+          <footer>
+            <%- include('partials/footer.ejs')  %> 
+        </footer>
+   
+  </body>
+</html>

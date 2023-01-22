@@ -1,0 +1,72 @@
+<div id="body_header">
+<header class="header">
+        <nav class="navbar">
+            <a href="/"> <img src="/images/logo_1.png" alt="Login" class="logo_image"></a>
+            <a href="/" class="nav-logo">Under Games</a>
+            <ul class="nav-menu">
+                <% if (locals.isLogged) {  %>
+                    <li>
+                            <div class="dropdown">
+                                <button type="button" class="avatar-btn"> 
+                                    <img src="/images/avatars/<%= locals.userLogged.avatar %>" class="avatar_image" alt="" width="50px" height="50px"/>
+                                    <a href="#"></a>
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <%= locals.userLogged.name %>
+                                    <ul class="dropdown-content">
+                                        <a href="/users/profile">Profile</a>
+                                        <li><hr></li>
+                                        <a href="/users/logout">Logout</a>
+                                    </ul>
+                            </div> 
+                        </li> 
+                    <li><a href="../productCart" class="fa-solid fa-cart-shopping fa-xl" alt="Cart"></a></li>
+                    <li><a href="../productList" class="fa-solid fa-clipboard-list  fa-xl" akt="Product List"></a></li>
+                    <li><a href="../under_constr" class="fa-solid fa-circle-question fa-xl" alt="FAQ"></a></li>
+
+                    <% if (locals.userLogged.email == "undergamesarg@gmail.com") {  %>
+                    <li><a href="/admin" class="fa-solid fa-toolbox fa-xl"></a></li>
+                    <% } else { %>
+                        <br>
+                    <% } %>
+                </li>
+                
+                <% } else { %>
+                <li class="nav-item">
+                        <li><a href="/users/login" class="fa-solid fa-user fa-xl" alt="Login"></a></li>
+                        
+                        <li><a href="../productList" class="fa-solid fa-clipboard-list  fa-xl" alt="Product List"></a></li>
+                      
+                        <li><a href="../under_constr" class="fa-solid fa-circle-question fa-xl" alt="FAQ"></a></li>
+                </li>    
+                <% } %>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<script>
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const navLink = document.querySelectorAll(".nav-link");
+
+hamburger.addEventListener("click", mobileMenu);
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+</script>
+

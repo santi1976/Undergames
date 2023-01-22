@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/style_admin.css">
+    <link rel="stylesheet" href="/css/search_bar.css">
+    
+</head>
+<body class="bodyAdmin__admin"></body>
+    <header>
+      <div class="headerAdmin">
+        <%- include ('../partials/header.ejs')  %> 
+      </div>
+      <div class="navbarAdmin">
+        <%- include('../partials/search_bar')%> 
+      </div>
+      </header>
+
+
+
+    
+        <main class="cont__admin">
+ 
+          <!--Administrador de productos-->
+          <br>
+          <div class="contMain__Admin">
+            <section class="row">
+              <article class="col-12 ">
+                <h2 class="adminH2__admin">Administrador de Productos</h2>
+              </article>
+              <article class="col-12">
+                <button class="btnCreate__Create"><a href="/admin/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar</a></button>
+              </article>
+  
+              <article class="col-12" >
+              <table class="tableAdmin__Admin">
+                  <thead>
+                    
+                    <thead>
+                      <tr>
+                        <th class="styleTable__admin">Id</th>
+                        <th class="styleTable__admin">Name</th>
+                        <th class="styleTable__admin">Detail</th>
+                        <th class="styleTable__admin">Edit</th>
+                        <th class="styleTable__admin">Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% games.forEach(games=> { %>
+                        <tr>
+                          <td class="styleTable__admin">
+                            <%= games.id_game %>
+                          </td>
+                          <td class="styleTable__admin">
+                            <%= games.title %>
+                          </td>
+                      
+                          <td class="styleTable__admin"><a href="/productDetail/<%= games.id_game%> ">
+                            <ion-icon name="eye-outline"></ion-icon>
+                          </a></td>
+                        <td class="styleTable__admin"><a href="/admin/edit/<%= games.id_game%> ">
+                            <ion-icon name="pencil-outline"></ion-icon>
+                          </a></td>
+                        <td class="styleTable__admin"><a href="/admin/delete/<%= games.id_game%>">
+                            <ion-icon name="trash-outline"></ion-icon>
+                            
+                              
+                                                    
+                            </a></td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>  
+              </article>       
+            </section>
+            <div class="footerAdmin">
+            <%- include ('../partials/footer.ejs')  %>  
+          </div>
+          </div>
+          <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        </main>
+      </body>
+    </html>
+    <footer >
+    </footer>
+</body>
+</html>
+
+

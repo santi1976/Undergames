@@ -1,0 +1,504 @@
+* {
+    box-sizing: border-box;
+/*      background-color: #353535; */
+    /* color: #ffffff;
+    font-family: 'Roboto', sans-serif; */
+    margin: 0;
+    padding:0;
+    height: auto;
+    width: auto;
+}
+
+.reg-body{
+    box-sizing: border-box;
+    background-color: #353535 ;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding:0;
+    /* height: 90vh; */
+
+}
+
+
+.reg-main{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    /* height: 100vh; */
+}
+
+#reg-h3{
+    text-align: center;
+}
+
+.register-form {
+    width: 85%;
+    height: 100% ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    background-color: #353535;
+}
+.form-ns-styler-register{
+    margin-bottom: 10px;
+    margin-top: 30px;
+    display:flex;
+    justify-content: center;
+}
+
+::placeholder{
+    color:white
+}
+
+#name{
+    margin-right:2vw;
+    width: 35vw;
+    border: 3px solid #1f2227;
+    padding:5px;
+    background-color: black;
+    border-radius: 10px;
+    height: 4.5vh;
+    text-align: center;
+    color: white;
+}
+
+
+#surname{
+    margin-left:2vw;
+    width: 35vw;
+    border: 3px solid #1f2227;
+    padding:5px;
+    background-color: black;
+    border-radius: 10px;
+    height: 4.5vh;
+    text-align: center;
+    color: white;
+}
+
+#gamertag{
+    width: 45vw;
+    border: 3px solid #1f2227;
+    padding:5px;
+    background-color: black;
+    border-radius: 10px;
+    height: 4.5vh;
+    text-align: center;
+    color: white;
+}  
+
+#email{
+    width: 45vw;
+    border: 3px solid #1f2227;
+    padding:5px;
+    background-color: black;
+    border-radius: 10px;
+    height: 4.5vh;
+    text-align: center;
+    color: white;
+}  
+
+#password{
+    width: 45vw;
+    border: 3px solid #1f2227;
+    padding:5px;
+    background-color: black;
+    border-radius: 10px;
+    height: 4.5vh;
+    text-align: center;
+    color: white;
+}  
+
+#repeted-password{
+    width: 45vw;
+    border: 3px solid #1f2227;
+    padding:5px;
+    background-color: black;
+    /* margin-bottom: 3vh; */
+    border-radius: 10px;
+    height: 4.5vh;
+    text-align: center;
+    color: white;
+}  
+
+.form-styler-register{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    
+}
+#reg-button{
+    width: 38vw;
+    height: 50px;
+    padding: 1rem;
+    background-color: #0078f1;
+    border: solid 1px white;
+    display:flex;
+    justify-content: center;
+    margin-left: 28%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+#reg-button:hover{
+    transform: translate(5px,5px);
+    box-shadow: 0px 0px 20px 5px rgba(100,100,100,1);
+    cursor: pointer;
+}
+
+.news-styler-register{
+    display:flex;
+    justify-content: center;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+#reg-lbl{
+    margin-left: 3px;
+}
+
+.tos-styler-register{
+    display:flex;
+    justify-content: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top:10px;
+}
+
+#tos-lbl{
+    margin-left: 3px;
+}
+
+
+.a-reg{
+    color: #0078f1
+}
+
+#reg-img-prof-txt{
+    font-size: 0.75rem;
+    color: white;
+    padding-right: 5px;
+    padding-top: 2px;
+    margin-left: 5.5rem;
+    /* margin-bottom: 2rem; */
+}
+
+
+#upload-img-btn::-webkit-file-upload-button{
+    background-color: #0078f1;
+    color: white;
+    border-radius: 4px;
+    border: #ffffff solid 1px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+
+.is-valid_registerUser{
+
+    border: #15b800 1.5px solid !important
+}
+
+.is-invalid_registerUser {
+
+    border: red 1.5px solid !important
+}
+.swal2-popup.swal2-modal.swal2-icon-error.swal2-show {
+    color: white;
+    background-color: black;
+    border: white solid 1px;
+}
+
+.swal2-confirm.swal2-styled {
+    background-color: #0078f1 !important;
+    border: 1px white solid !important;
+    box-shadow: 0px 0px 0px 0px transparent !important;
+}
+.errors.alert-warning_register {
+    display: none;
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    border: white solid 1.5px;
+    border-radius: 15px;
+    color: red !important;
+    margin-bottom: 10px;
+    width: 34rem;
+    margin-top: 1em;
+    padding: 1em;
+    max-width:95%;
+
+}
+.alert-warning_register {
+    color: #842029;
+    background-color: #F8D7DA;
+    text-align: center;
+    border-radius: 10px;
+}
+.errorNameSurname{
+    
+    display: flex;
+    width: 73vw;
+    height: 2em;
+    /* flex-direction: column; */
+    justify-content: center;
+    margin: auto;
+    margin-top: 0px;
+    /* border: 3px solid red; */
+}
+.div1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+
+}
+
+.div2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+/* .imgRegister{
+    border: 3px solid red;
+} */
+.errorMail{
+    align-items: center;
+}
+
+.lierror1 {
+    display: none;
+    text-align: center;
+}
+
+.lierror2 {
+    display: none;
+}
+.smallEmailError {
+    display: none;
+}
+.smallGamerTagError{
+    display: none;
+}
+.smallErrorPassword {
+    display: none;
+    margin: 0px!important;
+}
+.smallErrorPassword2{
+    display: none;
+}
+.smallErrorPassword3{
+    display: none;
+}
+.smallErrorPassword4{
+    display: none;
+}
+.smallErrorPassword5{
+    display: none;
+}
+.smallErrorPassword6{
+    display: none;
+}
+.errorImgReg{
+    display:none;
+}
+.errorPassword{
+    /* display: flex; */
+    align-self: center;
+    text-align: center;
+    margin-top: 0px !important;
+}
+.lierror1True {
+    color: #e4314f;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.lierror2True {
+    color: #e4314f;
+    display: flex;
+    justify-content: center;
+}
+.smallEmailErrortrue{
+    color: #e4314f;
+    display: flex;
+    justify-content: center;
+}
+.smallGamerTagErrortrue{
+    color: #e4314f;
+    display: flex;
+    justify-content: center;
+}
+.smallErrorPasswordTrue{
+    color: #e4314f;
+    display: flex;
+    justify-content: center;
+}
+.smallErrorPassword2True{
+    color: #e4314f;
+    display: flex;
+    justify-content: center;
+}
+.smallErrorPassword3True{
+    color: #e4314f;
+    display: flex;
+    justify-content: center;
+}
+.smallErrorPassword6True{
+    color: #e4314f;
+    display: flex;
+    justify-content: center;
+}
+.smallErrorPassword4True{
+    color: #e4314f;
+    display: flex;
+    justify-content: center;
+}
+.smallErrorPassword5True{
+    color: #e4314f;
+    display: flex;
+    justify-content: center;
+}
+.imgRegErrorTrue{
+    color: #e4314f;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em; 
+}
+@media  (max-width: 480px) {
+    .register-form{
+        width: 80%;
+        height: 95%;
+    }
+    
+    ::placeholder{
+        font-size: 12px;
+    }
+    #reg-lbl{
+        font-size: 12px;
+    }
+    #tos-lbl{
+        font-size: 12px;
+    }
+    #reg-h3{
+        font-size: 25px;
+    }
+    #reg-img-prof-txt{
+        margin-left: 2rem;
+        font-size: 0.50rem;
+        white-space: nowrap;
+        padding-top: 0.2rem;
+
+    }
+    #upload-img-btn::-webkit-file-upload-button{
+        font-size: 0.75rem;
+    }
+}
+@media  (min-width: 481px) {
+    ::placeholder{
+        font-size: 14px;
+    }
+#reg-lbl{
+    font-size: 14px;
+}
+#tos-lbl{
+    font-size: 14px;
+}
+}
+
+@media (min-width: 740px){
+    ::placeholder{
+        font-size: 18px;
+    }
+
+#reg-lbl{
+    font-size: 18px;
+}
+#tos-lbl{
+    font-size: 18px;
+}
+#tos{
+    margin-top: 3px;
+    margin-right: 3px;
+}
+#news{
+    margin-top: 3px;
+    margin-right: 3px;
+}
+#tos{
+    margin-top: 3px;
+    margin-right: 3px;
+    transform: scale(1.25)
+}
+#news{
+    margin-top: 3px;
+    margin-right: 3px;
+    transform: scale(1.25)
+}
+#reg-h3{
+    font-size: 40px;
+}
+}
+
+@media (min-width: 1025px){
+    ::placeholder{
+        font-size: 18px;
+    }
+.errorNameSurname{
+    width: 44vw;
+}
+#name{
+    width: 20vw;
+}
+#surname{
+    width: 20vw;
+}
+#gamertag{
+    width: 20vw;
+}
+#email{
+    width: 20vw;
+}
+#password{
+    width: 20vw;
+}
+#repeted-password{
+    width: 20vw;
+}
+#reg-button{
+    width: 16vw;
+    margin-left: 34.5vw;
+    margin-bottom: 60px;
+}
+#reg-lbl{
+    font-size: 18px;
+}
+#tos-lbl{
+    font-size: 18px;
+}
+#tos{
+    margin-top: 3px;
+    margin-right: 3px;
+    transform: scale(1.25)
+}
+#news{
+    margin-top: 3px;
+    margin-right: 3px;
+    transform: scale(1.25)
+}
+}
+
+

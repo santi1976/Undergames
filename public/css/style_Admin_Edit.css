@@ -1,0 +1,394 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.bodyEdit {
+    display: flex;
+    flex-direction: column;
+    background-color: #37393b;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.Image_Upload_Admin_Edit {
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 0.75em;
+    font-size: 1.5em;
+}
+
+.title__Description__Admin__Edit {
+    color: white;
+    margin-top: 1em;
+    font-size: 1.5em;
+
+}
+
+.title__Requirements__Admin_Edit {
+    color: white;
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+
+.title_Admin_Edit {
+    font-size: 2em;
+    margin-top: 1em;
+    color: white;
+    margin: 10px 10px 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+    color: #c5ccd3;
+
+}
+
+.title_Admin_Edit_1 {
+    font-size: 1.5em;
+    margin-top: 1em;
+    color: white;
+    margin: 10px;
+    text-align: center;
+}
+
+.img_Admin_Edit {
+
+    width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px grey);
+    background-color: rgb(32, 32, 32);
+    border-radius: 4%;
+    text-align: center;
+    max-width: 400px;
+
+}
+
+.contCreateImg__create {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+    margin-top: 1em;
+    align-items: center;
+}
+
+.contTxt_Admin_Edit {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.textArea_Admin_Edit {
+    width: 17em;
+    height: 2.5em;
+    margin: 1em;
+    align-self: center;
+    text-align: center;
+    background-color: #c5ccd3;
+    border-radius: 4px;
+}
+
+.form_Admin_Edit {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(20, 20, 20);
+    margin: 2em;
+
+}
+
+.con1_Admin_Edit {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    background-color: rgb(42, 42, 42);
+    align-items: center;
+}
+
+.con2_Admin_Edit {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    background-color: rgb(42, 42, 42);
+
+}
+
+.con3_Admin_Edit {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    background-color: rgb(42, 42, 42);
+}
+
+
+.contTxt_Admin_Edit h3 {
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: #c5ccd3;
+}
+
+/* .imgDelete{
+    width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px grey);
+    background-color: rgb(32, 32, 32);
+    border-radius: 4%;
+    text-align: center;
+   
+} */
+
+.imgEdit_Edit {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px grey);
+    background-color: rgb(32, 32, 32);
+    border-radius: 4%;
+    text-align: center;
+    max-width: 200px;
+}
+
+.Edit_Edit {
+    font-family: 'Roboto', sans-serif;
+    color: #ddd;
+    margin: 5px;
+    letter-spacing: .5px;
+}
+
+/* .textArea_Admin_Edit {
+    width: 17em;
+    height: 2.5em;
+    margin: 1em;
+    align-self: center;
+    text-align: center;
+} */
+
+.formCreate__create {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(20, 20, 20);
+    margin: 2em;
+
+}
+
+.formDelete {
+    width: 100%;
+    max-width: 40%;
+    margin: auto;
+    object-fit: fill;
+    border-radius: 5px;
+    margin: 2em;
+    align-self: center;
+}
+
+.productEditImg {
+    width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px grey);
+    background-color: rgb(32, 32, 32);
+    border-radius: 4%;
+    text-align: center;
+
+    max-width: 200px;
+
+}
+
+.btn_Admin_Edit {
+    box-shadow: inset 0px 0px 0px 0px #97c4fe;
+    background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+    background-color: #3d94f6;
+    border-radius: 15px;
+    border: 1px solid #337fed;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 11px 90px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #1a4672;
+    margin-top: 1vh;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.btn__cxl {
+    margin: auto;
+    width: 100%;
+    max-width: 40%;
+    box-shadow: inset 0px 0px 0px 0px #97c4fe;
+    background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+    background-color: #3d94f6;
+    border-radius: 15px;
+    border: 1px solid #337fed;
+    display: inline-block;
+    cursor: pointer;
+    color: #eee;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 11px 76px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #1a4672;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+.btn__delete {
+    margin: auto;
+    width: 100%;
+    max-width: 40%;
+    box-shadow: inset 0px 0px 0px 0px #97c4fe;
+    background: linear-gradient(to bottom, #b37133 5%, #db331d 100%);
+    background-color: #c29a51;
+    border-radius: 15px;
+    border: 1px solid #fa0101;
+    display: inline-block;
+    cursor: pointer;
+    color: #eee;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 11px 76px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #726748;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+.btn_Admin_Edit:hover {
+    background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+    background-color: #1e62d0;
+}
+
+.btn_Admin_Edit:active {
+    position: relative;
+    top: 1px;
+}
+
+p.table_Admin_Edit_Error {
+    position: relative;
+    color: rgb(230, 120, 120);
+    font-weight: bold;
+    bottom: 10px;
+
+}
+
+.combo-form_titles_edit {
+    position: relative;
+    color:#c5ccd3;
+    font-size:medium;
+    top: 10px;
+}
+
+.textArea2__Create, .textArea2__Create_shortDesc {
+    margin: 1em; 
+    background-color:#c5ccd3;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+#the-count__Create,   #the-count__Create_shortDesc  {
+    padding: 0.1rem 0 0 0;
+    font-size: 12px;
+    position: relative;
+    bottom: 10px;
+    left: 130px;
+    color:#eee;
+    padding: 5px;
+  }
+
+.errors.alert-warning_create {
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    border: white solid 1.5px;
+    border-radius: 15px;
+    color: red;
+    margin-bottom: 10px;
+    width: 34rem;
+
+}
+
+.alert-warning_create{
+    color:#842029;
+    background-color: #F8D7DA;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+.is-valid_create {
+ 
+border: #15b800 1.5px solid
+}
+
+.is-valid_edit {
+    
+border: #15b800 1.5px solid
+}
+
+.is-invalid_create {
+    
+    border: red 1.5px solid
+}
+
+.is-invalid_edit {
+    
+    border: red 1.5px solid
+}
+    
+
+.text-warning__Create{
+    color: #fb8500;
+}
+
+.text-danger__Create {
+    color: #e4314f;
+}
+
+.text-ok__Create {
+    color: #eee;
+}
+small.text-danger__Create__EditVal {
+    color: #e93755;
+}
+
+small#title,
+small#oneWord {
+    position: relative;
+    bottom: 10px;
+}
+small#shortDesc,
+small#longDesc {
+    position: relative;
+    bottom: 36px;
+    right: 40px;
+}
+
+small#youtube {
+    position: relative;
+    bottom: 15px;
+  
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .title__create{
+        font-size: 1.5em;
+    }
+}

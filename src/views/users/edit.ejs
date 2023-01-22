@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include('../partials/head.ejs')  %> 
+    </head>
+ 
+        
+        
+<body id="body_profile">
+	<header>
+		<%- include ('../partials/header.ejs')  %>  
+		<link rel="stylesheet" href="/css/profile.css">
+	</header> 
+	
+	<h2 class="userEditName">Editing User:  <%= userToEdit.name %></h2>
+			<section class="formulario">
+			<form action="/users/edit/<%= userToEdit.id_users %>?_method=PUT" method="POST" >	
+				<div class="formEditUser">
+						<label for="nombre">Nombre: </label>
+						<p><input type="text" name="nombre" id="casillero" value="<%= userToEdit.name %>" required></p>
+						
+						<label for="surname">Apellido: </label>
+						<p><input type="text" name="surname" id="casillero" value="<%= userToEdit.surname %>" required></p>
+						
+						<label for="gamertag">Gamertag: </label>
+						<p><input type="text" name="gamertag" id="casillero" value="<%= userToEdit.gamertag %>" required></p>
+						<br>
+				
+						<p> <button class="editSubmin" type="submit">Update</button>
+					
+						</div>
+						<!-- <a  class="botonVolver" href="../views/users/profile"> </a></p> -->
+					</form>
+				
+			</section>
+
+	
+	<footer class="footerEdit">
+		<%- include ('../partials/footer.ejs')  %>  
+	</footer>
+</body>
+</html>

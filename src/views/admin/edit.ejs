@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/style_Admin_Edit.css">
+    <link rel="stylesheet" href="/css/search_bar.css">
+  
+
+<body class="bodyEdit">
+  <header>
+    <%- include('../partials/header.ejs') %>
+    <%- include('../partials/search_bar')%>
+  </header>
+
+  <div class="form_Admin_Edit">
+
+    <h3 class="title_Admin_Edit">Edit Game:</h3>
+    <h1 class="title_Admin_Edit_1">
+      <%= gameToEdit.title%>
+    </h1>
+
+    <div class="contCreateImg__create">
+      <img class="img_Admin_Edit" src="<%= gameToEdit.img_1 %>" alt="">
+    </div>
+    <form class="form"  action="/admin/edit/<%= gameToEdit.id_game%>?_method=PUT" method="POST" enctype="multipart/form-data">
+      <br>
+      <div class="errors">
+        <ul>
+          
+        </ul>
+      </div>  
+
+      <div class="contTxt_Admin_Edit">
+        <div class="con1_Admin_Edit">
+          <h3 class="Image_Upload_Admin_Edit">Image Edit</h3>
+          <input type="hidden" name="oldImage1" value="<%= gameToEdit.img_1 %>" />
+          <p class="Edit_Edit">Imagen principal</p>
+          <img class="imgEdit_Edit" src="<%= gameToEdit.img_1 %>" alt="">
+          <input class="textArea_Admin_Edit" type="file" name="img_1" placeholder="image 1" value="1" 
+          accept=".jpg, .jpeg .png" />
+          <% if(locals.errors && errors.img_1){ %>
+            <p class="table_Admin_Edit_Error">
+              <%= errors.img_1.msg %>
+            </p>
+          <% } %>
+
+
+          <input type="hidden" name="oldImage2" value="<%= gameToEdit.img_2 %>" />
+          <p class="Edit_Edit">Current Image 2</p>
+          <img class="imgEdit_Edit" src="<%= gameToEdit.img_2 %>" alt="">
+          <input class="textArea_Admin_Edit" type="file" name="img_2" placeholder="image 2" value="2"
+            accept=".jpg, .jpeg .png" />
+            <% if(locals.errors && errors.img_2){ %>
+              <p class="table_Admin_Edit_Error">
+                <%= errors.img_2.msg %>
+              </p>
+            <% } %>
+
+          <input type="hidden" name="oldImage3" value="<%= gameToEdit.img_2 %>" />
+          <p class="Edit_Edit">Current Image 3</p>
+          <img class="imgEdit_Edit" src="<%= gameToEdit.img_3 %>" alt="">
+          <input class="textArea_Admin_Edit" type="file" name="img_3" placeholder="image 3" value="3"
+            accept=".jpg, .jpeg .png" />
+            <% if(locals.errors && errors.img_3){ %>
+              <p class="table_Admin_Edit_Error">
+                <%= errors.img_3.msg %>
+              </p>
+            <% } %>
+
+          <input type="hidden" name="oldImage4" value="<%= gameToEdit.img_4 %>" />
+          <p class="Edit_Edit">Current Image 4</p>
+          <img class="imgEdit_Edit" src="<%= gameToEdit.img_4 %>" alt="">
+          <input class="textArea_Admin_Edit" type="file" name="img_4" placeholder="image 4" value="4"
+            accept=".jpg, .jpeg .png" />
+            <% if(locals.errors && errors.img_4){ %>
+              <p class="table_Admin_Edit_Error">
+                <%= errors.img_4.msg %>
+              </p>
+            <% } %>
+
+          <input type="hidden" name="oldImage5" value="<%= gameToEdit.img_5 %>" />
+          <p class="Edit_Edit">Current Image 5</p>
+          <img class="imgEdit_Edit" src="<%= gameToEdit.img_5 %>" alt="">
+          <input class="textArea_Admin_Edit" type="file" name="img_5" placeholder="image 5" value="5"
+            accept=".jpg, .jpeg .png" />
+            <% if(locals.errors && errors.img_5){ %>
+              <p class="table_Admin_Edit_Error">
+                <%= errors.img_5.msg %>
+              </p>
+            <% } %>
+        </div>
+
+
+      <div class="con2_Admin_Edit">
+          <h3 class="title__Description__Admin__Edit">Description Edit</h3>
+          <label class="combo-form_titles_edit" for="title">Title</label>
+          <input class="textArea_Admin_Edit" type="text" name="title" placeholder="Title"
+            value="<%= gameToEdit.title %>" />
+          <small id="title" class="text-danger__Create__EditVal"></small>
+          <% if(locals.errors && errors.title){ %>
+            <p class="table_Admin_Edit_Error">
+              <%= errors.title.msg%>
+            </p>
+          <% } %>
+
+          <label class="combo-form_titles_edit" for="one_word_descr">One Word Description</label>
+          <input class="textArea_Admin_Edit" type="text" name="one_word_descr" placeholder="One Word Description"
+            value="<%=gameToEdit.one_word_descr%>" />
+          <small id="oneWord" class="text-danger__Create__EditVal"></small>
+          <% if(locals.errors && errors.one_word_descr){ %>
+            <p class="table_Admin_Edit_Error">
+              <%= errors.one_word_descr.msg %>
+            </p>
+          <% } %>
+
+          <label class="combo-form_titles_edit" for="short_desc">Short Description</label>
+          <textarea minlength="20" maxlength="100" class="textArea2__Create_shortDesc" type="text" name="short_descr" rows="4" cols="40" placeholder="Please write a description from 20 to 100 words" value=""><%= gameToEdit.short_descr%></textarea>
+          <div id="the-count__Create_shortDesc">
+            <span id="minimum_shortDesc"></span>
+            <span id="current_shortDesc">0</span>
+            <span>/</span>
+            <span id="maximum_shortDesc">100</span>
+          </div> 
+          <small id="shortDesc" class="text-danger__Create__EditVal"></small>
+          <% if(locals.errors && errors.short_descr){ %>
+            <p class="table_Admin_Edit_Error">
+              <%= errors.short_descr.msg%>
+            </p>
+          <% } %>
+
+            <label class="combo-form_titles_edit" for="long_desc">Long Description</label>
+            <textarea   minlength="100" maxlength="300" class="textArea2__Create" type="text" name="long_descr" rows="8" cols="40" placeholder="Please write a description from 100 to 300 words"><%= gameToEdit.long_descr%></textarea>
+            <div id="the-count__Create">
+              <span id="minimum"></span>
+              <span id="current">0</span>
+              <span>/</span>
+              <span id="maximum">300</span>
+            </div> 
+            <small id="longDesc" class="text-danger__Create__EditVal"></small>
+            <% if(locals.errors && errors.long_descr){ %>
+              <p class="table_Admin_Edit_Error">
+                <%= errors.long_descr.msg%>
+              </p>
+            <% } %>
+
+
+            <label class="combo-form_titles_edit" for="game_group">Game Group</label>
+            <select name="game_group" class="textArea_Admin_Edit" >
+            <option value="" disabled selected > Choose Game Group </option>
+            <% allGameGroups.forEach(function (game_group) { %>
+          <%= game_group.game_group %>" <%= locals.oldData && (game_group  === oldData.game_group) ? 'selected'  : null %> > <%= game_group.game_group %> 
+            <option value="<%= game_group.id_game_group %>" <% if (gameToEdit.id_game_group == game_group.id_game_group) { %>
+                <%= 'selected' %><% }; %>>
+                <%= game_group.game_group %></option>
+            <% }) %>
+          </select> 
+          <% if (locals.errors && errors.game_group) { %>  
+            <p class="tableAdmin_Error"> <%= errors.game_group.msg %> </p>
+          <% } %> 
+           
+
+          <label class="combo-form_titles_edit" for="category">Game Category</label>
+            <select name="category" class="textArea_Admin_Edit" >
+            <option value=""  disabled selected > Choose Category </option>
+            <% allCategories.forEach(function (category) { %>
+            <option value="<%= category.id_category %>" 
+              <% if (gameToEdit.id_category == category.id_category) { %><%= 'selected' %><% }; %>>
+              <%= category.category %></option>
+            <% }) %>
+          </select> 
+          <% if (locals.errors && errors.category) { %>  
+            <p class="tableAdmin_Error"> <%= errors.category.msg %> </p>
+          <% } %> 
+
+
+      <label class="combo-form_titles_edit" for="original_price">Price</label>
+          <input class="textArea_Admin_Edit" type="text" name="original_price"
+            placeholder="Original Price" value="<%= gameToEdit.original_price%>" />
+          <% if(locals.errors && errors.original_price){ %>
+            <p class="table_Admin_Edit_Error">
+              <%= errors.original_price.msg%>
+            </p>
+          <% } %>
+
+   <!--    <label class="combo-form_titles_edit" for="price_w_discount">Price With Discount</label>
+          <input class="textArea_Admin_Edit" type="text" name="price_w_discount"
+            placeholder="Price With Discount"
+            value="<%= gameToEdit.price_w_discount%>" />
+          <% if(locals.errors && errors.price_w_discount){ %>
+            <p class="table_Admin_Edit_Error">
+              <%= errors.price_w_discount.msg%>
+            </p>
+            <% } %> -->
+
+      <label class="combo-form_titles_edit" for="discount">Discount</label>  
+          <input class="textArea_Admin_Edit" type="text" name="discount"
+            placeholder="Discount" value="<%= gameToEdit.discount%>" />
+          <% if(locals.errors && errors.discount){ %>
+            <p class="table_Admin_Edit_Error">
+              <%= errors.discount.msg%>
+            </p>
+            <% } %>
+
+        <label class="combo-form_titles_edit" for="video_1">Youtube URL</label>
+          <input class="textArea_Admin_Edit" type="text" name="video_1"
+            placeholder="Youtube URL" value="<%= gameToEdit.video_1%>" />
+            <small id="youtube" class="text-danger__Create__EditVal"></small>
+          <% if(locals.errors && errors.video_1){ %>
+            <p class="table_Admin_Edit_Error">
+              <%= errors.video_1.msg %>
+            </p>
+            <% } %>
+
+
+        </div>
+
+      <div class="con3_Admin_Edit">
+        <h3 class="title__Requirements__Admin_Edit">Requirements Edit</h3>
+          <input class="textArea_Admin_Edit" type="date" name="launch_date" placeholder="Launch Date"
+            value="<%= gameToEdit.launch_date%>" />
+          <% if(locals.errors && errors.launch_date){ %>
+            <p class="table_Admin_Edit_Error">
+              <%= errors.launch_date.msg %>
+            </p>
+            <% } %>
+
+
+
+            <label class="combo-form_titles_edit" for="platform">Platform</label>
+            <select name="platform" class="textArea_Admin_Edit" >
+            <option value="" disabled selected > Choose Platform </option>
+            <% allPlatforms.forEach(function (platform) { %>
+            <option value="<%= platform.id_platforms %>" 
+              <% if (gameToEdit.id_platforms === platform.id_platforms) { %><%= 'selected' %><% }; %>>
+              <%= platform.platform_descr %></option>
+            <% }) %>
+          </select> 
+          <% if (locals.errors && errors.platform) { %>  
+            <p class="tableAdmin_Error"> <%= errors.platform.msg %> </p>
+          <% } %> 
+
+          <label class="combo-form_titles_edit" for="os_min">OS Minimun Requirement</label>
+          <select name="os_min" class="textArea_Admin_Edit" >
+          <option value="" disabled selected > Choose OS Minimum Requirement </option>
+          <% allOsmin.forEach(function(os_min) { %>
+          <option value="<%= os_min.id_os_min %>" 
+            <% if (gameToEdit.id_os_min === os_min.id_os_min) { %><%= 'selected' %><% }; %>>
+            <%= os_min.os_min %></option>
+          <% }) %>
+        </select> 
+        <% if (locals.errors && errors.os_min) { %>  
+          <p class="tableAdmin_Error"> <%= errors.os_min.msg %> </p>
+        <% } %> 
+
+
+
+        <label class="combo-form_titles_edit" for="os_rec">OS Recommended</label>
+          <select name="os_rec" class="textArea_Admin_Edit" >
+          <option value="" disabled selected > Choose Recommended OS </option>
+          <% allOsrec.forEach(function (os_rec) { %>
+          <option value="<%= os_rec.id_os_rec %>" 
+            <% if (gameToEdit.id_os_rec == os_rec.id_os_rec) { %><%= 'selected' %><% }; %>>
+            <%= os_rec.os_rec %></option>
+          <% }) %>
+        </select> 
+        <% if (locals.errors && errors.os_rec) { %>  
+          <p class="tableAdmin_Error"> <%= errors.os_rec.msg %> </p>
+        <% } %> 
+
+        <label class="combo-form_titles_edit" for="processor_min">Minimum Processor</label>
+        <select name="processor_min" class="textArea_Admin_Edit" >
+        <option value="" disabled selected > Choose Minimum Processor Requirement </option>
+        <% allProcessormin.forEach(function (processor_min) { %>
+        <option value="<%= processor_min.id_processor_min %>" 
+          <% if (gameToEdit.id_processor_min == processor_min.id_processor_min) { %><%= 'selected' %><% }; %>>
+          <%= processor_min.processor_min %></option>
+        <% }) %>
+      </select> 
+      <% if (locals.errors && errors.processor_min) { %>  
+        <p class="tableAdmin_Error"> <%= errors.processor_min.msg %> </p>
+      <% } %> 
+
+    
+
+      <label class="combo-form_titles_edit" for="processor_rec">Processor Recommended</label>
+        <select name="processor_rec" class="textArea_Admin_Edit" >
+        <option value="" disabled selected > Choose Recommended Processor </option>
+        <% allProcessorec.forEach(function (processor_rec) { %>
+        <option value="<%= processor_rec.id_processor_rec %>" 
+          <% if (gameToEdit.id_processor_rec == processor_rec.id_processor_rec) { %><%= 'selected' %><% }; %>>
+          <%= processor_rec.processor_rec %></option>
+        <% }) %>
+      </select> 
+      <% if (locals.errors && errors.processor_rec) { %>  
+        <p class="tableAdmin_Error"> <%= errors.processor_rec.msg %> </p>
+      <% } %> 
+ 
+      <label class="combo-form_titles_edit" for="storage_min">Recommended Minimum Storage</label>
+      <select name="storage_min" class="textArea_Admin_Edit" >
+      <option value="" disabled selected > Choose Minimum Storage Requirement </option>
+      <% allStoragemin.forEach(function (storage_min) { %>
+      <option value="<%= storage_min.id_storage_min %>" 
+        <% if (gameToEdit.id_storage_min == storage_min.id_storage_min) { %><%= 'selected' %><% }; %>>
+        <%= storage_min.storage_min %></option>
+      <% }) %>
+      </select> 
+      <% if (locals.errors && errors.storage_min) { %>  
+      <p class="tableAdmin_Error"> <%= errors.storage_min.msg %> </p>
+      <% } %> 
+
+
+
+      <label class="combo-form_titles_edit" for="storage_rec">Recommended Storage</label>
+      <select name="storage_rec" class="textArea_Admin_Edit" >
+      <option value="" disabled selected > Choose Recommended Storage </option>
+      <% allStoragerec.forEach(function (storage_rec) { %>
+      <option value="<%= storage_rec.id_storage_rec %>" 
+        <% if (gameToEdit.id_storage_rec == storage_rec.id_storage_rec) { %><%= 'selected' %><% }; %>>
+        <%= storage_rec.storage_rec %></option>
+      <% }) %>
+      </select> 
+      <% if (locals.errors && errors.storage_rec) { %>  
+      <p class="tableAdmin_Error"> <%= errors.storage_rec.msg %> </p>
+      <% } %> 
+
+        
+      <label class="combo-form_titles_edit" for="graphics_min">Graphics Minimum Requirement</label>
+      <select name="graphics_min" class="textArea_Admin_Edit" >
+      <option value="" disabled selected > Choose Graphics Minimum Requirement </option>
+      <% allGraphicsmin.forEach(function (graphics_min) { %>
+      <option value="<%= graphics_min.id_graphics_min %>" 
+        <% if (gameToEdit.id_graphics_min == graphics_min.id_graphics_min) { %><%= 'selected' %><% }; %>>
+        <%= graphics_min.graphics_min %></option>
+      <% }) %>
+      </select> 
+      <% if (locals.errors && errors.graphics_min) { %>  
+      <p class="tableAdmin_Error"> <%= errors.graphics_min.msg %> </p>
+      <% } %> 
+
+
+
+        <label class="combo-form_titles_edit" for="graphics_rec">Recommended Graphics</label>
+        <select name="graphics_rec" class="textArea_Admin_Edit" >
+        <option value="" disabled selected > Choose Recommended Graphics </option>
+        <% allGraphicsrec.forEach(function (graphics_rec) { %>
+        <option value="<%= graphics_rec.id_graphics_rec %>" 
+          <% if (gameToEdit.id_graphics_rec == graphics_rec.id_graphics_rec) { %><%= 'selected' %><% }; %>>
+          <%= graphics_rec.graphics_rec %></option>
+        <% }) %>
+        </select> 
+        <% if (locals.errors && errors.graphics_rec) { %>  
+        <p class="tableAdmin_Error"> <%= errors.graphics_rec.msg %> </p>
+        <% } %> 
+        </div>
+      </div>
+
+
+      <button class="btn_Admin_Edit" type="submit">Save Changes</button>
+
+  </div>
+  </form>
+  </div>
+
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+  </footer>
+
+  <script src="/js/textAreaCounters.js"></script>
+  <script src="/js/productsEditValidate.js"></script>   
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+
+
+</html>
