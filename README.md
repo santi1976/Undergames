@@ -6,6 +6,8 @@
 
 El proyecto se inicia originalmente en 2022 con un grupo de colegas bajo la supervisión docente de Digital House, con el objetivo de aprender conceptos mientras construíamos un sitio eCommerce. Este trabajo formó parte del Proyecto Integrador trabajo principal del curso. A partir de 2023 se continúa el trabajo de manera individual. 
 
+Trabajo original https://github.com/NicolasBrugliera/grupo_11_UnderGames
+
 > Indie Games Infinite Adventures.
 
 UnderGames es la plataforma para brindar todo lo referido a Indie Games (juegos independientes).
@@ -26,6 +28,8 @@ insertarnos en el mercado y dar visibilidad a lo que queremos ofrecer.
 -    Nicolás Bugliera: San Luis Capital, 27 años. Estudiante de desarrollo full stack. https://github.com/NicolasBrugliera
 -    Patricia Onieva: Buenos Aires, 54 años. Profesional del área de Sistemas, enfocada en Análisis de 
      Datos y Bussiness Intelligence. https://github.com/ponieva
+     
+     
 
 ***
 
