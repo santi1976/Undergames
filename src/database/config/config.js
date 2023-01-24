@@ -9,7 +9,11 @@ require('dotenv').config();
 		"port": process.env.DB_PORT || 3306,
 		"dialect": "mysql",
 		"logging": false,
-		"operatorsAliases": 0
+		"operatorsAliases": 0, 
+		"pool": {
+			"maxConnections": 100,
+			"maxIdleTime": 1000
+		  },
 	},
 	"test": {
 		"username": "root",
@@ -17,7 +21,11 @@ require('dotenv').config();
 		"database": "database_test",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
-		"operatorsAliases": 0
+		"operatorsAliases": 0,
+		"pool": {
+			"maxConnections": 100,
+			"maxIdleTime": 1000
+		  },
 	},
 	"production": {
 		"username": process.env.DB_USER,
@@ -25,7 +33,11 @@ require('dotenv').config();
 		"database": process.env.DB_NAME,
 		"host": process.env.DB_HOST,
 		"dialect": "mysql",
-		"operatorsAliases": 0
+		"operatorsAliases": 0,
+		"pool": {
+			"maxConnections": 100,
+			"maxIdleTime": 1000
+		  },
 	}
 } 
  
