@@ -2,47 +2,44 @@ require('dotenv').config();
 
  module.exports = {
 	"development": {
-		"username": process.env.DB_USER || 'root',
-		"password": process.env.DB_PASS || '',
-		"database": process.env.DB_NAME || "undergames_db",
-		"host": process.env.DB_HOST || 'localhost',
-		"port": process.env.DB_PORT || 3306,
-		"dialect": "mysql",
-		"logging": false,
-		"operatorsAliases": 0, 
-		"pool": {
-			"maxConnections": 100,
-			"maxIdleTime": 1000
-		  },
-	},
-	"test": {
-		"username": "root",
-		"password": null,
-		"database": "database_test",
-		"host": "127.0.0.1",
-		"dialect": "mysql",
-		"operatorsAliases": 0,
-		"pool": {
-			"maxConnections": 100,
-			"maxIdleTime": 1000
-		  },
-	},
-	"production": {
+		"port": process.env.PORT,
 		"username": process.env.DB_USER,
 		"password": process.env.DB_PASS,
 		"database": process.env.DB_NAME,
 		"host": process.env.DB_HOST,
+		"dbport": process.env.DB_PORT,
 		"dialect": "mysql",
-		"operatorsAliases": 0,
-		"pool": {
-			"maxConnections": 100,
-			"maxIdleTime": 1000
-		  },
+		"logging": false,
+		"operatorsAliases": 0
+	},
+	
+	"test": {
+		"port": process.env.PORT,
+		"username": process.env.DB_USER,
+		"password": process.env.DB_PASS,
+		"database": process.env.DB_NAME,
+		"host": process.env.DB_HOST,
+		"dbport": process.env.DB_PORT,
+		"dialect": "mysql",
+		"logging": false,
+		"operatorsAliases": 0
+	},
+	"production": {
+		"port": process.env.PORT,
+		"username": process.env.DB_USER,
+		"password": process.env.DB_PASS,
+		"database": process.env.DB_NAME,
+		"host": process.env.DB_HOST,
+		"dbport": process.env.DB_PORT,
+		"dialect": "mysql",
+		"logging": false,
+		"operatorsAliases": 0
 	}
-} 
+	
+}  
  
-/* 
-require('dotenv').config();
+ 
+/* require('dotenv').config();
 module.exports = 
 {
 	"development": {
@@ -67,4 +64,4 @@ module.exports =
 	  "host": "127.0.0.1",
 	  "dialect": "mysql"
 	}
-  } */
+  }  */
