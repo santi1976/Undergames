@@ -3,11 +3,11 @@ require('dotenv').config();
  module.exports = {
 	"development": {
 		"port": process.env.PORT,
-		"DB_HOST": "containers-us-west-179.railway.app",
-		"DB_NAME": "railway",
-		"DB_PASS": "mse5muqqTMZarKIdV5Ly",
-		"DB_PORT": "5992",
-		"DB_USER": "root",
+		"username": process.env.DB_USER || 'root',
+		"password": process.env.DB_PASS || null,
+		"database": process.env.DB_NAME || 'undergames_db',
+		"host": process.env.DB_HOST || 'localhost',
+		"dbport": process.env.DB_PORT || 3306,
 		"dialect": "mysql",
 		"logging": false,
 		"operatorsAliases": 0
