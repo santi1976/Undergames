@@ -4,7 +4,7 @@ require('dotenv').config();
 	"development": {
 		"port": process.env.PORT,
 		"username": process.env.DB_USER || 'root',
-		"password": process.env.DB_PASS || null,
+		"password": process.env.DB_PASS || '',
 		"database": process.env.DB_NAME || 'undergames_db',
 		"host": process.env.DB_HOST || 'localhost',
 		"dbport": process.env.DB_PORT || 3306,
