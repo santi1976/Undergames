@@ -3,11 +3,11 @@ require('dotenv').config();
  module.exports = {
 	"development": {
 		"port": process.env.PORT,
-		"username": process.env.DB_USER,
-		"password": process.env.DB_PASS,
-		"database": process.env.DB_NAME,
-		"host": process.env.DB_HOST,
-		"dbport": process.env.DB_PORT,
+		"DB_HOST": "containers-us-west-179.railway.app",
+		"DB_NAME": "railway",
+		"DB_PASS": "mse5muqqTMZarKIdV5Ly",
+		"DB_PORT": "5992",
+		"DB_USER": "root",
 		"dialect": "mysql",
 		"logging": false,
 		"operatorsAliases": 0
